@@ -1,13 +1,27 @@
-
 import React from "react";
-import './../styles/App.css';
+import AutoComplete from "./AutoComplete";
 
 const App = () => {
-  return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+  const indianCities = [
+    "Mumbai",
+    "Delhi",
+    "Bangalore",
+    "Hyderabad",
+    "Ahmedabad",
+    "Chennai",
+    "Kolkata",
+    "Pune",
+    "Jaipur",
+    "Surat",
+    "Lucknow",
+  ];
 
-export default App
+  return (
+    <div style={{ padding: "50px" }}>
+      <h1>Indian Cities :</h1>
+      <AutoComplete suggestions={indianCities} />
+    </div>
+  );
+};
+
+export default App;
